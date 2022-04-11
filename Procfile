@@ -1,0 +1,1 @@
+web: gunicorn --chdir app final/hobbies.wsgi:application --log-file - --log-level debug
