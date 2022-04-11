@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    {% for user in users %}
+        <div class="username">
+            <a href="{% url 'user_detail' user.id %}">
+            <h3>{{ user.name|capfirst }}</h3>
+            </a>
+            <p>{{ user.age }}</p>
+            <p class="hidden">{{ user.sex }}</p>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

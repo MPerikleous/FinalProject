@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+    <h3>{{ user.name|capfirst }}</h3>
+    {% if user.age %}
+        <p>Age: {{ user.age }}</p>
+    {% endif %}
+    {% if user.sex %}
+        <p>Sex: {{ user.sex }}</p>
+    {% endif %}
+</div>
+{% endblock %}

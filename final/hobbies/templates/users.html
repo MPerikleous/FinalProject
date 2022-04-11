@@ -1,0 +1,22 @@
+{% extends "hobbies/base.html" %}
+
+{%load static%}
+{% block body %}
+        <section id="speakers" class="pt-4">
+            <h1 class="display-4 text-center my-5 text-muted">Users</h1>
+            <div class="row">
+             {% for user in users %}
+                <div class="col-md-6 col-lg-4">
+                    <div class="card mb-3">
+                        <!-- <img class="card-img-top" src="/static/img/{{user.avatar}}" alt="Vivianne"> -->
+                        <div class="card-body">
+                            <a href="{% url 'speaker_detail' user.id %}">
+                                <h4 class="card-title">{{user.name}}</h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </section>
+{% endblock %}
